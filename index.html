@@ -6,10 +6,35 @@
     <meta charset="UTF-8"> <!--método entrada teclado-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--adapta escala e tamanho de visualização ao dispositivo(device)-->
     <title>Meu Perfil</title> <!--título definido-->
+
+    <link rel="stylesheet" href="assets/img/css/style.css">
+
+    <!--para estilização de todas as tags p-->
+    <!--<style> 
+        p{
+            font-size:20px; 
+        }
+    </style>-->
+    <!--para estilização por id. Utiliza # e cada id é unico. Só pode ser usado uma unica vez por um unico paragrafo
+    <style>
+        #p1{
+            font-size: 20px;
+        }
+    </style> -->
+    <!--estilização por classe utiliza o ponto no lugar de  hashtag permite q varios paragrafos sejam da mesma classe
+    <style> 
+        .p1{ 
+            font-size: 20px;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>-->
+
 </head><!--cabeçalho-->
 <body>
 
-<ul> <!--ul = lista desordenada ou ol = lista ordenada/numerada. Para criação do menu-->
+<ul id="menu"> <!--ul = lista desordenada ou ol = lista ordenada/numerada. Para criação do menu. Utilização de id para estilização especifica somente dessa ul-->
 
     <li>
        <a href="index.html"> Home </a>     <!-- "a" = tag ancora/de link. href= atributo-->
@@ -23,26 +48,34 @@
 
 </ul>
 
-    <h1>Sobre a Letícia</h1> <!--h:título/subtitulo 1:tam do titulo.Vai de 1(maior) a 6 (menor). Só pode existir um único h1/título-->
-<p>
+    <h1 class="center">Sobre a Letícia</h1> <!--h:título/subtitulo 1:tam do titulo.Vai de 1(maior) a 6 (menor). Só pode existir um único h1/título-->
+<div class="container"> 
+    
+<div class="pad-60">
+    <p class="center"> <!--estilização por id: <p id="p1"> --> <!-- para estilização de um unico paragrafo inline: <p style="font-size:30px;"> -->
     <!--utilização comando lorem para gerar texto aleatório-->
     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Illum veritatis sapiente voluptas debitis? 
     Doloremque aliquid consectetur ipsa iure ad sed dicta neque quaerat?
      Dignissimos nostrum alias eligendi, cupiditate illum delectus.
      </p>
-     <p>
+     <p class="center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Eius expedita minus numquam eos saepe, 
         minima dicta dolor necessitatibus cum quas, 
         eveniet tenetur temporibus dignissimos doloremque magni 
         quasi sint quod sequi!
      </p>
-    
-<img src="assets/img/Foto da dev.jfif" alt="Foto do criador do conteúdo"> <!--evitar uso de imagens de links exteros. Salve e utilize de assetsalt: utilizado p acessibilidade-->
+     </div>
+ 
+ <div>
+<img class="borda-arredondada altxlarg pad-60" src="assets/img/fotodadev.jpeg" alt="Foto do criador do conteúdo"> <!--evitar uso de imagens de links exteros. Salve e utilize de assetsalt: utilizado p acessibilidade-->
+</div>
 
-<h2>Meu vídeo predileto:</h2>
+</div>
 
+<h2 class="center">Meu vídeo predileto:</h2>
+<div class="container">
 <iframe 
 width="560" height="315" src="https://www.youtube.com/embed/i0DuudAGpk0?si=kLZd8Art3VRB3lNt" 
 title="YouTube video player" frameborder="0" 
@@ -50,6 +83,6 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 referrerpolicy="strict-origin-when-cross-origin" 
 allowfullscreen>
 </iframe>
-
+</div>
 </body>
 </html>
